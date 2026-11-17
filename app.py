@@ -1,0 +1,23 @@
+import streamlit as st
+st.title("Student Registration Form")
+name=st.text_input("Name of the student")
+rollno=st.text_input("Roll Number of the student")
+age=st.slider("Select Age",1,100,19)
+course=st.text_input("Course")
+phno=st.text_input("Phone Number")
+address=st.text_area("Address")
+gender=st.radio("Gender",["Female","Male"])
+nationality=st.selectbox("Nationality",["INDIA","USA","UK","SA"])
+agree=st.checkbox("I Agree")
+if st.button("Submit"):
+    st.subheader("Registered Information")
+    st.write("Name:",name)
+    st.write("Roll Number:",rollno)
+    st.write("Age:",age)
+    st.write("Course:",course)
+    st.write("Phone Number:",phno)
+    st.write("Address:",address)
+    st.write("Gender:",gender)
+    st.write("Nationality:",nationality)
+    if agree:
+        st.write("Thank you for Registering!Your details have been saved")
